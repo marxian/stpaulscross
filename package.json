@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "JSONStream": "^0.10.0",
+    "csvtojson": "^0.3.18",
     "express": "^4.12.2",
-    "mongoose": "^3.8.24"
+    "jade": "^1.9.2",
+    "mongoose": "^3.8.24",
+    "through": "^2.3.6"
   },
-  "scripts": {
-    "start": "node index.js"
+  "devDependencies": {
+    "csv-json": "^0.1.0",
+    "csv-to-json": "0.0.4"
   }
 }
