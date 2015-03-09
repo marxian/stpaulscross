@@ -10,9 +10,9 @@ mongoose.connect('mongodb://heroku:hNLm3C4IX0bv8PXCERewbzN6xw3wf6lgu5T8XODETzjzF
 app.set('view engine', 'jade');
  
 app.get('/:year/:stall', function (req, res) {
-	var owner = stalls[req.params.stall.toString()][req.params.year.toString()];
+	var stall = stalls[req.params.stall.toString()][req.params.year.toString()];
 	var q = {
-		collophon : { $regex : new RegExp(owner, 'i') },
+		collophon : { $regex : new RegExp(stall.q, 'i') },
 		year: req.params.year
 	};
 	console.dir(q);
@@ -25,7 +25,7 @@ app.get('/:year/:stall', function (req, res) {
 			console.log(result);
 			//res.send('hello');
 			res.render('index', { 
-				title: owner + ' ' + req.params.year.toString(),
+				title: stall.name + ' - ' + req.params.year.toString(),
 				books: result
 			});
 		}

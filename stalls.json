@@ -1,11 +1,20 @@
 {
 	"22": {
-		"1666": ["thrale"]
+		"1640": {
+			"q": ["fawne"],
+			"name": "The Brazen Serpent"
+		}
 	},
 	"14": {
-		"1640": ["broun"]
+		"1640": {
+			"q": ["broun"],
+			"name": "White Lion and Ball"
+		}
 	},
 	"19": {
-		"1640": ["thompson", "the bishops head"]
+		"1640": {
+			"q": ["thompson"],
+			"name": "The Bishop's Head"
+		}
 	}
 }

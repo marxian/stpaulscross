@@ -2,7 +2,10 @@ html
 	head
 		title!= title
 	body
+		h1= title
 		ul
 		each book in books
 			li
-				a= book.title
+				h2= book.title
+				p
+					em= book.collophon
