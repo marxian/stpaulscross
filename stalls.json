@@ -16,5 +16,30 @@
 			"q": ["thompson"],
 			"name": "The Bishop's Head"
 		}
+	},
+	"18": {
+		"name": "The Prince's Arms",
+		"q": ["moseley"]
+	},
+	"20": {
+		"name": "The King's Head",
+		"q": ["bostock"]
+	},
+	"24": {
+		"name": "The Parrot",
+		"q": ["aspley"]
+	},
+	"25": {
+		"name": "The Angel",
+		"q": ["blackmore"]
+	},
+	"26": {
+		"name": "The Black Bear",
+		"q": ["crooke"]
+	},
+	"50": {
+		"name": "The Crane",
+		"q": ["williams"]
 	}
+
 }
