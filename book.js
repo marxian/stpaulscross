@@ -2,7 +2,6 @@ var mongoose = require('mongoose'),
 	 schemae = {},
 	 models = {};
 
-
 schemae.bookSchema = new mongoose.Schema(
     {
         title: String,
@@ -14,7 +13,6 @@ schemae.bookSchema = new mongoose.Schema(
 
 schemae.bookSchema.index({year: 1});
 schemae.bookSchema.index({collophon: 'text'});
-
 
 models.Book = mongoose.model('Book', schemae.bookSchema);
 

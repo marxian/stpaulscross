@@ -1,24 +1,17 @@
 {
-  "name": "stpauls",
+  "name": "stpaulscross",
   "version": "1.0.0",
-  "description": "",
+  "description": "A visualisation of the contents of the booksellers stalls in St Paul's Cross in 1640",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "rupert@neontribe.co.uk <Rupert Redington>",
   "license": "ISC",
   "dependencies": {
-    "JSONStream": "^0.10.0",
-    "csvtojson": "^0.3.18",
     "express": "^4.12.2",
     "jade": "^1.9.2",
     "mongoose": "^3.8.24",
     "serve-static": "^1.9.1",
-    "through": "^2.3.6"
-  },
-  "devDependencies": {
-    "csv-json": "^0.1.0",
-    "csv-to-json": "0.0.4"
   }
 }
