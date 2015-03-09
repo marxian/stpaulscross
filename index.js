@@ -11,28 +11,37 @@ mongoose.connect('mongodb://heroku:hNLm3C4IX0bv8PXCERewbzN6xw3wf6lgu5T8XODETzjzF
 app.set('view engine', 'jade');
 
 app.use(serveStatic('maps', {}));
+
+var error_msg = {
+	title: 'So Sorry',
+	message: "We've not mapped that bookstall yet"
+};
  
 app.get('/:year/:stall', function (req, res) {
-	var stall = stalls[req.params.stall.toString()][req.params.year.toString()];
-	var q = {
-		collophon : { $regex : new RegExp(stall.q, 'i') },
-		year: req.params.year
-	};
-	console.dir(q);
-	book.find(
-		q,
-		function(err, result){
-			if (err) {
-				res.send(err.toString());
+	try {
+		var stall = stalls[req.params.stall.toString()][req.params.year.toString()];
+		var q = {
+			collophon : { $regex : new RegExp(stall.q, 'i') },
+			year: req.params.year
+		};
+		console.dir(q);
+		book.find(
+			q,
+			function(err, result){
+				if (err) {
+					res.render('error', error_msg);
+				}
+				console.log(result);
+				//res.send('hello');
+				res.render('index', { 
+					title: stall.name + ' - ' + req.params.year.toString(),
+					books: result
+				});
 			}
-			console.log(result);
-			//res.send('hello');
-			res.render('index', { 
-				title: stall.name + ' - ' + req.params.year.toString(),
-				books: result
-			});
-		}
-	);
+		);
+	} catch (e) {
+		res.render('error', error_msg);
+	}
 
 });
  
