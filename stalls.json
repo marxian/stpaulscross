@@ -18,28 +18,40 @@
 		}
 	},
 	"18": {
-		"name": "The Prince's Arms",
-		"q": ["moseley"]
-	},
+		"1640": {
+			"name": "The Prince's Arms",
+			"q": ["moseley"]
+		}
+	},		
 	"20": {
-		"name": "The King's Head",
-		"q": ["bostock"]
+		"1640": {
+			"name": "The King's Head",
+			"q": ["bostock"]
+		}
 	},
 	"24": {
-		"name": "The Parrot",
-		"q": ["aspley"]
+		"1640": {
+			"name": "The Parrot",
+			"q": ["aspley"]
+		}
 	},
 	"25": {
-		"name": "The Angel",
-		"q": ["blackmore"]
+		"1640": {
+			"name": "The Angel",
+			"q": ["blackmore"]
+		}
 	},
 	"26": {
-		"name": "The Black Bear",
-		"q": ["crooke"]
+		"1640": {
+			"name": "The Black Bear",
+			"q": ["crooke"]
+		}
 	},
 	"50": {
-		"name": "The Crane",
-		"q": ["williams"]
+		"1640": {
+			"name": "The Crane",
+			"q": ["williams"]
+		}
 	}
 
 }
