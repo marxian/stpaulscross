@@ -1,13 +1,9 @@
 var express = require('express');
-var mongoose = require('mongoose');
 var book = require('./book.js').models.Book;
 var app = express();
 var stalls = require('./stalls.json');
 var serveStatic = require('serve-static');
 
-mongoose.connect(process.env.MONGOLAB_URI, function(err){
-	throw err;
-});
 app.set('view engine', 'jade');
 
 app.use(serveStatic('maps', {}));
@@ -42,4 +38,4 @@ app.get('/:year/:stall', function (req, res) {
 
 });
  
-app.listen(process.env.PORT);
+app.listen(process.env.PORT || 4000);

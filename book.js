@@ -2,6 +2,8 @@ var mongoose = require('mongoose'),
 	 schemae = {},
 	 models = {};
 
+mongoose.connect(process.env.MONGOLAB_URI);
+
 schemae.bookSchema = new mongoose.Schema(
     {
         title: String,
